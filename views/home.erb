@@ -1,8 +1,22 @@
 <h1> Book Search </h1>
 
+<% if user != '' %>
 <p>Please enter the book title to search</p>
 
-<form method='post' action="search">
-	<input type="text" name="title">
-	<button type='submit'>Submit</button>
-</form>
+
+	<form method='post' action="search">
+		<input type="text" name="title_isbn">
+		<button type='submit'>Submit</button>
+	</form>
+	<form method="post" action="view_cart">
+		<button type='submit'>Cart</button>
+	</form>
+<% else %>
+	<form method="post" action="login">
+		<button type='submit'>Login</button>
+	</form>
+	<form method="post" action="create">
+		<button type='submit'>Create Account</button>
+	</form>
+	
+<%end%>

@@ -1,0 +1,20 @@
+<table>
+	<tr>
+		<th>Title</th>
+		<th>ISBN</th>
+		<th>Quantity</th>
+		<th>Price</th>
+	</tr>
+	<tr>
+		<td><%=book['title']%></td>
+		<td><%=book['isbn']%></td>
+		<td><%=book['quantity']%></td>
+		<td><%=price%></td>
+	</tr>
+</table>
+<p>How many would you like to add to your cart?</p>
+
+<form method="post" action="cart">
+	<input type="number" name="number_add_to_cart" min='0' max=<%=book['quantity']%>>
+	<button type='submit'>Submit</button>
+</form>

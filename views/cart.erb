@@ -1,0 +1,15 @@
+<h1>Here is your order. Please review</h1>
+<table>
+	<tr>
+		<th>Title</th>
+		<th>ISBN</th>
+		<th>Quantity</th>
+	</tr>
+	<% book_array.each do |book| %>
+	<tr>
+		<td><%=book[0]['title']%></td>
+		<td><%=book[0]['isbn']%></td>
+		<td><%=total_ordered[0]['quantity']%></td>
+	</tr>
+	<%end%>
+</table>
