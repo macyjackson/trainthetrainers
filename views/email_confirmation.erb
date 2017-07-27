@@ -1,0 +1,37 @@
+<h1>Hello <%user_info[0]['name']%>, the following order will be shipped shortly</h1>
+<table>
+	<tr>
+		<th>Title</th>
+		<th>ISBN</th>
+		<th>Quantity</th>
+	</tr>
+	<% index = 0 %>
+	<% book_array.each do |book| %>
+		<tr>
+			<td><%=book['title']%></td>
+			<td><%=book['isbn']%></td>
+			<td><%=total_ordered[index]%></td>
+		</tr>
+		<% index = index + 1 %>
+	<%end%>
+</table>
+
+<h3>Books will be mailed to the following address: </h3>
+<table>
+	<tr>
+		<td>Address: </td>
+		<td><%=user_info[0]['address']%></td>
+	</tr>
+	<tr>
+		<td>City: </td>
+		<td><%=user_info[0]['city']%></td>
+	</tr>
+	<tr>
+		<td>State: </td>
+		<td><%=user_info[0]['state']%></td>
+	</tr>
+	<tr>
+		<td>Zipcode: </td>
+		<td><%=user_info[0]['zipcode']%></td>
+	</tr>
+</table>

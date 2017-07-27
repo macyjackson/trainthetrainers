@@ -7,9 +7,13 @@
 	</tr>
 	<% book_array.each do |book| %>
 	<tr>
-		<td><%=book[0]['title']%></td>
-		<td><%=book[0]['isbn']%></td>
-		<td><%=total_ordered[0]['quantity']%></td>
+		<td><%=book['title']%></td>
+		<td><%=book['isbn']%></td>
+		<td><%=total_ordered[0]%></td>
 	</tr>
 	<%end%>
 </table>
+
+<form method='post' action='confirm_order'>
+	<button type='submit'>Confirm Order</button>
+</form>
